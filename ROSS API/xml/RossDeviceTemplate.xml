@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1st draft 03/22/08 by Andy Wu -->
+<rossXML>
+	<!--Ross Space-->
+	<space>
+		<name></name><!-- Device long name -->
+		<shortname></shortname><!-- Device short name -->
+		<version></version><!-- version of this XML file. format: HHMMSS-mmddyy -->
+		<description></description>
+		<dimension type=""><!-- Dimension of the space (unit: inch). type: rec, elp  -->
+			<!-- rectangular -->
+			<w-value></w-value><!-- a floating point number >= 0 -->
+			<l-value></l-value><!-- a floating point number >= 0 -->
+			<h-value></h-value><!-- a floating point number >= 0 -->
+			<!-- elliptic -->
+			<a-value></a-value><!-- a floating point number >= 0 -->
+			<b-value></b-value><!-- a floating point number >= 0 -->
+			<h-value></h-value><!-- a floating point number >= 0 -->
+		</dimension>
+		<orientation><!-- A normalized vector. The vector toward the center of the earth is defined as (0, 0, -1) -->
+			<x-value></x-value><!-- -1 <= a floating point number <= 1 -->
+			<y-value></y-value><!-- -1 <= a floating point number <= 1 -->
+			<z-value></z-value><!-- -1 <= a floating point number <= 1 -->
+		</orientation>
+		<location><!-- For a Ross root object, this can be the room where the object is placed. 
+		For other Ross objects, this is the relative location of that object to its parent object. (from the center)  -->
+			<value></value>
+			<x-value>0</x-value><!-- -1 <= a floating point number <= 1 -->
+			<y-value>0</y-value><!-- -1 <= a floating point number <= 1 -->
+			<z-value>1</z-value><!-- -1 <= a floating point number <= 1 -->
+		</location>
+		<sensor><!-- sensor properties -->
+			<description>
+			</description>
+			<resolution>
+				<width>
+				</width>
+				<height>
+				</height>
+			</resolution>
+		</sensor>
+		<author>
+			<name></name>
+		</author>
+		<institution></institution>
+		<keywords>
+			<value></value>
+		</keywords>
+		<protocol><!--All information about the protocol; Must be based on OSC-->
+			<name type=""></name><!-- can be std or user, currently, std is availble for TUIO -->
+			<version></version>
+			<profile>
+				<address></address><!-- follows OSC url-style -->
+				<message>
+					<command></command>
+					<parameter id=""><!-- attr:id is the order of a parameter, starts from 0 -->
+						<datatype></datatype><!-- can be: i, f, s, b -->
+						<description></description>
+					</parameter>
+				</message>
+			</profile>
+		</protocol>
+		<network>
+			<ipaddress></ipaddress>
+			<port></port>
+		</network>
+	</space>
+	<version>0.1</version><!--Ross XML description file format version-->
+</rossXML>

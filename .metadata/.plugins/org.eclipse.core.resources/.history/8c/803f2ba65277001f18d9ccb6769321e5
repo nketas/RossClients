@@ -1,0 +1,5 @@
+package rossClients;
+
+public class RossInfoClientThread extends Thread{
+
+}

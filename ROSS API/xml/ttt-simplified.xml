@@ -1,0 +1,31 @@
+
+<rossXML>
+	<space>
+		<name>Tangible Tracking Table</name><!-- Device long name -->
+			...
+		<description>An interactive tabletop display ...</description>
+		<dimension type="rec"><!-- Dimension (unit: inch) of the space. type: rec, elp  -->
+			...
+		</dimension>
+		<orientation><!-- A normalized vector. The vector toward the center of the earth is defined as (0, 0, -1) -->
+			...
+		</orientation>
+		<location type="addr"><!-- For a Ross root object, this can be the room where the object is placed. 
+		For other Ross objects, this is the relative location of that object to its parent object. (from the center)
+		type: addr, vec  -->
+			...
+		</location>
+		<keywords>...</keywords>
+		<space>
+			<!-- another ross object/surface -->
+			...
+			<sensor><!-- sensor properties -->...</sensor>
+			...
+			<protocol><!--All information about the protocol; Must be based on OSC-->
+				<name type="std">TUIO</name><!-- can be std or user, currently, std is availble for TUIO -->
+				...
+			</protocol>
+			<network>...</network>
+		</space>
+	</space>
+</rossXML>

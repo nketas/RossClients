@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!--ROSS Space-->
+	<space>
+		<!--All information about the protocol
+			Must be based on OSC-->
+		<protocol>
+			<name></name>
+			<version></version>
+			<profile>
+				<name></name>
+				<message>
+					<command></command>
+					
+					<parameter id=""><value></value>
+						<datatype></datatype></parameter></message>
+			</profile>
+		</protocol>
+		<network>
+			<ipaddress></ipaddress>
+			<port></port></network>
+		<name></name>
+		<description></description></space>
+	<!--ROSS XML description file version-->
+	<version></version>
+</root>

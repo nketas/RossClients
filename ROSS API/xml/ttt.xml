@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1st draft 03/22/08 by Andy Wu -->
+<rossXML>
+	<!--Ross Space-->
+	<space>
+		<name>Tangible Tracking Table</name><!-- Device long name -->
+		<shortname>TTT</shortname><!-- Device short name -->
+		<version>0.1</version><!-- version of this XML file. format: HHMMSS-mmddyy -->
+		<description>An interactive tabletop display that allows multiple fingertip tracking and tangible object tracking. The table can be used for a range of digital media applications in collaborative settings such as meeting rooms, classrooms and living rooms. The demo shows our current technology prototype. Applications under development include games and storytelling engines, as well as a stage manager for machinima creation.</description>
+		<dimension type="rec"><!-- Dimension (unit: inch) of the space. type: rec, elp  -->
+			<!-- rectangular -->
+			<w-value>36</w-value><!-- a floating point number >= 0 -->
+			<l-value>48</l-value><!-- a floating point number >= 0 -->
+			<h-value>39</h-value><!-- a floating point number >= 0 -->
+			<!-- elliptic -->
+			<a-value></a-value><!-- a floating point number >= 0 -->
+			<b-value></b-value><!-- a floating point number >= 0 -->
+			<h-value></h-value><!-- a floating point number >= 0 -->
+		</dimension>
+		<orientation><!-- A normalized vector. The vector toward the center of the earth is defined as (0, 0, -1) -->
+			<x-value>0</x-value><!-- -1 <= a floating point number <= 1 -->
+			<y-value>0</y-value><!-- -1 <= a floating point number <= 1 -->
+			<z-value>1</z-value><!-- -1 <= a floating point number <= 1 -->
+		</orientation>
+		<location type="addr"><!-- For a Ross root object, this can be the room where the object is placed. 
+		For other Ross objects, this is the relative location of that object to its parent object. (from the center)
+		type: addr, vec  -->
+			<value>Room 209, TSRB, Georgia Institute of Technology</value>
+			<x-value></x-value><!-- -1 <= a floating point number <= 1 -->
+			<y-value></y-value><!-- -1 <= a floating point number <= 1 -->
+			<z-value></z-value><!-- -1 <= a floating point number <= 1 -->
+		</location>
+		<author>Andy Wu, Ali Mazalek</author>
+		<institution>Georgia Institute of Technology</institution>
+		<keywords>
+			<value>multitouch</value>
+		</keywords>
+		<space>
+			<name>Tangible Tracking Table</name><!-- Device long name -->
+			<shortname>TTT</shortname><!-- Device short name -->
+			<version>0.1</version><!-- version of this XML file. format: HHMMSS-mmddyy -->
+			<description>An interactive tabletop display that allows multiple fingertip tracking and tangible object tracking. The table can be used for a range of digital media applications in collaborative settings such as meeting rooms, classrooms and living rooms. The demo shows our current technology prototype. Applications under development include games and storytelling engines, as well as a stage manager for machinima creation.</description>
+			<dimension type="rec"><!-- Dimension (unit: inch) of the space. type: cyl, rec, elp  -->
+				<!-- rectangular -->
+				<w-value>30</w-value><!-- a floating point number >= 0 -->
+				<l-value>40</l-value><!-- a floating point number >= 0 -->
+				<h-value>0</h-value><!-- a floating point number >= 0 -->
+				<!-- cylindrical -->
+				<r-value></r-value><!-- a floating point number >= 0 -->
+				<h-value></h-value><!-- a floating point number >= 0 -->
+				<!-- elliptic -->
+				<a-value></a-value><!-- a floating point number >= 0 -->
+				<b-value></b-value><!-- a floating point number >= 0 -->
+				<h-value></h-value><!-- a floating point number >= 0 -->
+			</dimension>
+			<orientation><!-- A normalized vector. The vector toward the center of the earth is defined as (0, 0, -1) -->
+				<x-value>0</x-value><!-- -1 <= a floating point number <= 1 -->
+				<y-value>0</y-value><!-- -1 <= a floating point number <= 1 -->
+				<z-value>1</z-value><!-- -1 <= a floating point number <= 1 -->
+			</orientation>
+			<location type="vec"><!-- For a Ross root object, this can be the room where the object is placed. 
+			For other Ross objects, this is the relative location of that object to its parent object. (from the center)  -->
+				<value></value>
+				<x-value>0</x-value><!-- -1 <= a floating point number <= 1 -->
+				<y-value>0</y-value><!-- -1 <= a floating point number <= 1 -->
+				<z-value>0</z-value><!-- -1 <= a floating point number <= 1 -->
+			</location>
+			<sensor><!-- sensor properties -->
+			<description>
+			Fire-i camera
+			</description>
+			<resolution>
+				<width>
+				1024
+				</width>
+				<height>
+				768
+				</height>
+			</resolution>
+			</sensor>
+			<author>
+				<name>Andy Wu</name>
+				<name>Ali Mazalek</name>
+			</author>
+			<institution>Georgia Institute of Technology</institution>
+			<keywords>
+				<value>multitouch</value>
+				<value>tabletop</value>
+			</keywords>
+			<protocol><!--All information about the protocol; Must be based on OSC-->
+				<name type="std">TUIO</name><!-- can be std or user, currently, std is availble for TUIO -->
+				<version>1.4</version>
+				<profile>
+					<address>/tuio/2Dobj</address><!-- follows OSC url-style -->
+					<message>
+						<command>add</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>
+						<parameter id="1"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>fiducial id</description>
+						</parameter>						
+					</message>
+					<message>
+						<command>del</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>
+						<parameter id="1"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>fiducial id</description>
+						</parameter>
+					</message>
+					<message>
+						<command>set</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>						
+						<parameter id="1"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>fiducial id</description>
+						</parameter>						
+						<parameter id="2"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>normalized x position</description>
+						</parameter>						
+						<parameter id="3"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>normalized y position</description>
+						</parameter>						
+						<parameter id="4"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>rotation of object in radians</description>
+						</parameter>						
+						<parameter id="5"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>x speed</description>
+						</parameter>						
+						<parameter id="6"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>y speed</description>
+						</parameter>						
+						<parameter id="7"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>motion acceleration</description>
+						</parameter>						
+						<parameter id="8"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>rotation acceleration</description>
+						</parameter>						
+					</message>
+				</profile>
+				<profile>
+					<address>/tuio/2Dcur</address><!-- follows OSC url-style -->
+					<message>
+						<command>add</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>					
+					</message>
+					<message>
+						<command>del</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>
+					</message>
+					<message>
+						<command>set</command>
+						<parameter id="0"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>i</datatype><!-- can be: i, f, s, b -->
+							<description>session id</description>
+						</parameter>												
+						<parameter id="1"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>normalized x position</description>
+						</parameter>						
+						<parameter id="2"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>normalized y position</description>
+						</parameter>												
+						<parameter id="3"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>motion acceleration</description>
+						</parameter>						
+						<parameter id="4"><!-- attr:id is the order of a parameter, starts from 0 -->
+							<datatype>f</datatype><!-- can be: i, f, s, b -->
+							<description>rotation acceleration</description>
+						</parameter>						
+					</message>
+				</profile>
+			</protocol>
+			<network>
+				<ipaddress>127.0.0.1</ipaddress>
+				<port>5433</port>
+			</network>
+		</space>
+	</space>
+	<version>0.1</version><!--Ross XML description file format version-->
+</rossXML>

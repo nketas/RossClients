@@ -1,0 +1,7 @@
+1207018649850	Rename type 'FinishedXMLCollecting'
+1207062000943	Rename type 'RequestThread'
+1207068908073	Delete element
+1207186469789	Rename type 'RossXMLReader'
+1207190147253	Delete element
+1207190171735	Delete element
+1207203295605	Rename local variable 'remoteXmlOutput'

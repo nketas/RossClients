@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<rossXML>
+<!-- Root object -->
+  <robject>
+    <!-- General tags, e.g. ID, name, etc. -->
+    <name>TViews Table - It really is</name>
+    <id type="int">1</id>
+    <description>...</description>
+    <keywords>...</keywords>
+    <location type="address">Atlanta, GA</location>
+    <!-- Nested surface -->
+      <rsurface>
+        <!-- General tags -->
+
+        <!-- Dimension in inches, e.g. rectangle, ellipse -->
+        <dimension type="rectangle">
+          <width>32</width>
+        </dimension>
+
+        <!-- Normalized vector, e.g. toward earth center (0, 0, -1) -->
+        <orientation>...</orientation>
+
+        <!-- Nested objects -->
+        <robject>
+          <!-- General tags -->
+
+          <!-- Range of 64-bit TViews IDs configured with buttons -->
+          <idfrom type="double">...</idfrom>
+          <idto type="double">...</idto>
+          <!-- Other general tags, e.g. name, description -->         
+          <!-- Nested control -->
+          <rcontrol>
+          </rcontrol>
+        </robject>
+    </rsurface>
+  </robject>
+</rossXML>
+

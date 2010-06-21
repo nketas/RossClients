@@ -1,0 +1,16 @@
+1206232757455	Rename type 'XMLReader'
+1206232783135	Rename type 'RossProxyServer'
+1206237733092	Rename local variable 'qualifiedName'
+1206237750000	Rename local variable 'localName'
+1206237764999	Rename local variable 'atts'
+1206237823674	Rename local variable 'localName'
+1206237831229	Rename local variable 'qualifiedName'
+1206237907695	Rename local variable 'namespaceURI'
+1206237916140	Rename local variable 'namespaceURI'
+1206243172486	Rename type 'ROSSDevice'
+1206243190130	Rename type 'ROSSSpace'
+1206243224984	Rename type 'ROSSProxyServer'
+1206243240728	Rename type 'ROSSReader'
+1206281542135	Delete element
+1206281551549	Delete element
+1206298974068	Rename type 'Proxy'

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="478"/>
+		<item key="DIALOG_HEIGHT" value="372"/>
+		<item key="DIALOG_Y_ORIGIN" value="213"/>
+		<item key="DIALOG_WIDTH" value="516"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.project"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.views.problem">
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>
